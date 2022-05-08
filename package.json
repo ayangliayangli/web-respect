@@ -1,0 +1,13 @@
+{
+  "name": "web-respect",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "yangli",
+  "license": "MIT",
+  "dependencies": {
+    "http-server": "^14.1.0"
+  },
+  "scripts": {
+    "dev": "http-server ."
+  }
+}

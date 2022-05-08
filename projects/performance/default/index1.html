@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function highExpenseCompute(n = 1000000000) {
+            const startTime = new Date().getTime();
+            for (let i = 0; i < n; i++) {
+                ;              
+            }
+            const endTime = new Date().getTime();
+            const duration = endTime - startTime
+            return duration;
+        }
+
+        function highExpenseCompute2(n = 1000000000) {
+            const startTime = new Date().getTime();
+            for (let i = 0; i < n; i++) {
+                ;              
+            }
+            const endTime = new Date().getTime();
+            const duration = endTime - startTime
+            return duration;
+        }
+
+        
+        function main() {
+            const t1 = highExpenseCompute() // event: load 执行
+            const t2 = highExpenseCompute() // event: load 执行
+
+            setTimeout(() => {
+                const t3 = highExpenseCompute2() // event: load 之后执行，下一个event了
+            }, 0);
+
+            const msg = `合计耗时 ${t1 + t2}ms`
+
+            console.log(msg);
+            document.body.innerHTML = `<div>${msg}</div>`
+        }
+
+        window.addEventListener('load', (ev) => {
+            main()
+        })
+    </script>
+</body>
+</html>
